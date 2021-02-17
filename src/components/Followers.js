@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Followers = () => {
   const { githubFollowers } = useGlobalContext()
-  console.log(githubFollowers);
   return <Wrapper>
     <div className="followers">
       {githubFollowers.map((follower, index) => {
