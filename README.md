@@ -48,7 +48,7 @@ version used - "react-router-dom": "^5.2.0",
 
 - [Root Endpoint](https://api.github.com)
 - [Get User](https://api.github.com/users/unclejide1)
-- [Repos](https://api.github.com/users/unclejide1/repos?per_100page=)
+- [Repos](https://api.github.com/users/unclejide1/repos?per_page=100)
 - [Followers](https://api.github.com/users/unclejide1/followers)
 - [Rate Limit](https://api.github.com/rate_limit)
 
