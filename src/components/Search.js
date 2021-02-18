@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { MdSearch } from 'react-icons/md'
 import { useGlobalContext } from '../context/context'
 const Search = () => {
-  const {} = useGlobalContext()
+  const {request} = useGlobalContext()
+  console.log(request);
   const [user, setUser] = useState('')
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -24,7 +25,7 @@ const Search = () => {
               value={user}
               onChange={(e) => setUser(e.target.value)}
             />
-            <button type='submit'>search</button>
+            {request > 0 && <button type='submit'>search</button>}
           </div>
         </form>
         <h3>requests: 60/60</h3>
