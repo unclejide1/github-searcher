@@ -20,7 +20,6 @@ const Repos = () => {
     return total
   }, {})
 
-  console.log(languages)
   //mostUsed Langues
   const mostUsed = Object.values(languages)
     .sort((a, b) => {
@@ -42,8 +41,6 @@ const Repos = () => {
   // stars, forks
   let { stars, forks } = githubRepos.reduce((total, item) => {
     let {stargazers_count, name, forks} = item
-    console.log(stargazers_count);
-    
     if (total.stars[stargazers_count] && stargazers_count !== 0) {
       
       if (total.stars[stargazers_count + 1]){
@@ -89,11 +86,11 @@ const Repos = () => {
     stars: {},
     forks: {},
   })
-  console.log(stars);
+
   stars = Object.values(stars).slice(-5).reverse();
-  console.log(forks)
+  
   forks = Object.values(forks).slice(-5).reverse()
-  console.log(forks);
+  
 
   return (
     <section className='section'>
